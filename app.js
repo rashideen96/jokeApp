@@ -22,11 +22,19 @@ function output(e){
                 console.log('error');
             }
             document.querySelector('.joke').innerHTML = output;
-        } 
+        } else {
+            console.log(this.status);
+        }
 
         
         
     }
+    xhr.onerror = function() {
+        console.log('Request error...');
+    }
 
+    
+
+    
     xhr.send();
 }
